@@ -127,46 +127,11 @@ def processaTranscricao(data_csv):
     messages = [
     {
         'role': 'system',
-        'content': "Responda as questões a seguir com base na transcrição, respeitando os limites de resposta\
-                    definidos em cada uma das perguntas e o formato HTML estabelecido.\
-                    Exemplo de formato desejado:\
-                        <h2>Resumo</h2><p>Coloque o resumo aqui</p>\
-                        <hr><h2>Perguntas Exploratórias</h2>\
-                        <div id='cargo'><h3>Qual o cargo do cliente atualmente?</h3><p>Produtor Rural</p></div>\
-                        <div id='desafio'><h3>Qual desafio ou problema o cliente enfrenta atualmente?</h3><p>Resposta</p>\
-                        <div id='transicao'><h3>O cliente busca transição de carreira?</h3><p>Sim</p></div>\
-                        <div id='capacitacao'><h3>Qual o motivo de busca pela capacitação?</h3><p>Resposta</p></div>\
-                        <div id='area'><h3>Qual a área plantada em hectare ou alqueire que o cliente possui?</h3><p>Valor em hectare ou alqueire</p></div>\
-                        <div id='tempo'><h3>Quanto tempo de atuação o cliente possui na área?</h3><p>Quantidade em anos</p></div>\
-                        <div id='escolaridade'><h3>Qual é o seu nível de escolaridade?</h3><p>Superior</p></div>\
-                        <div id='empresa'><h3>Em qual empresa o cliente trabalha?</h3><p>Syngenta</p></div>\
-                    1. Resumo: \
-                        - Resuma a ligação focando nos pontos mais importantes comentados pelo cliente.\
-                    2. Perguntas Exploratórias:\
-                        Caso não tenha a resposta apenas coloque `Não mencionado`\
-                        - Com o que o cliente trabalha atualmente?(Utilize APENAS as seguintes opções:\
-                            Analista, Analista de Dados, Assistente Técnico Agrícola,\
-                            Consultor Agrícola, Coordenador, Coordenador Agrícola, Desenvolvedor de Mercado,\
-                            Diretor, Engenheiro Agrônomo, Especialista, Estudante, Gerente, Gerente Comercial,\
-                            Gerente de Fazenda, Operador de Máquinas, Pesquisa e Desenvolvimento, Produtor Rural,\
-                            RTV/RTC, Sucessor, Supervisor, Supervisor Agrícola, Técnico Agrícola, Técnico de Informação ou Outros)\n\
-                        - Descreva de forma suscinta os desafios ou problemas que o cliente enfrenta atualmente.\
-                            Por exemplo, se o cliente enfrenta dificuldades na gestão, a resposta desejada seria `Dificuldades na gestão`.\
-                        - O cliente busca transição de carreira? (Sim, não ou não mencionado)\
-                        - Descreva de forma suscinta o motivo de busca pela capacitação?\
-                            Por exemplo, se o cliente quer se aperfeiçoar, a resposta desejada seria `Aperfeiçoamento`.\
-                        - Qual a área plantada em hectare ou alqueire que o cliente possui? Responda APENAS\
-                            se o cliente mencionar a área plantada.\
-                        - Quanto tempo de atuação o cliente possui na área do agronegócio? Descreva o valor usando apenas números, em anos.\
-                            Por exemplo, se o cliente possui sete anos de experiência, a resposta desejada seria '7 anos'.\
-                        - Qual é o nível de escolaridade do cliente? Por favor, UTILIZE APENAS AS OPÇÕES A SEGUIR:\
-                            Superior, Técnico, Ensino Médio ou Básico.\
-                        - Qual o nome da empresa que o cliente trabalha?\
-                    "
+        'content': " SEU PROMPT AQUI "
     },
     {
         'role': 'user',
-        'content': f'Por favor, responda APENAS o que foi solicitado. A seguir segue a transcrição da chamada:\n\n{transcript_text}.'
+        'content': f'SEU PROMPT AQUI :\n\n{transcript_text}.'
     },
     ]
 
