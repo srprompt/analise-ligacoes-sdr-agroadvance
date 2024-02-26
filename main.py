@@ -609,17 +609,7 @@ while True:
                         caminho_completo = os.path.join(caminho_origem, nome_arquivo)
 
                         if os.path.isfile(caminho_completo):
-                            # Verifique se o caminho é um arquivo
-                            #audio = open(caminho_completo, "rb")
                             
-                            
-                            '''
-                            transcricao = openai.audio.transcriptions.create(
-                                            model="whisper-1", 
-                                            file=audio,
-                                            response_format="text"
-                                        )
-                            '''
                             model = whisper.load_model("small")
                             resposta = model.transcribe(caminho_completo)
                             
@@ -638,8 +628,6 @@ while True:
                                 txt_file.write(formatted_transcript)
 
                             print("\nTranscrição formatada e tratada salva no arquivo transcript.txt") 
-
-                            #audio.close()
 
                             os.remove(caminho_completo)
 
